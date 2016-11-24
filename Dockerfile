@@ -1,6 +1,6 @@
 FROM alpine:3.4
 
-ENV CONSUL_TEMPLATE_VERSION="0.15.0" \
+ENV CONSUL_TEMPLATE_VERSION="0.16.0" \
     DOCKER_HOST=unix:///tmp/docker.sock
 
 RUN apk --no-cache add curl bash zip \
