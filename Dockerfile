@@ -10,7 +10,7 @@ RUN apk --no-cache add curl zip tar \
     && mv consul-template /usr/local/bin/consul-template \
     && rm consul.zip \
     && mkdir -p /consul-template /consul-template/config.d /consul-template/templates \
-    && curl -fsSLO https://get.docker.com/builds/Linux/x86_64/docker-${DOCKER_VER}.tgz && tar --strip-components=1 -xvzf docker-${DOCKER_VER}.tgz -C /bin \
+    && curl -fsSLO https://get.docker.com/builds/Linux/x86_64/docker-${DOCKER_VER}.tgz && tar --strip-components=1 -xvzf docker-${DOCKER_VER}.tgz docker/docker -C /bin \
     && apk del zip tar
 
 ENTRYPOINT [ "/usr/local/bin/consul-template" ]
