@@ -1,4 +1,4 @@
-FROM alpine:3.4
+FROM alpine:3.5
 
 ENV CONSUL_TEMPLATE_VERSION="0.18.1" \
     DOCKER_HOST=unix:///tmp/docker.sock \
