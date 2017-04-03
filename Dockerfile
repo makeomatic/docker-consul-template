@@ -1,8 +1,8 @@
 FROM alpine:3.5
 
-ENV CONSUL_TEMPLATE_VERSION="0.18.1" \
+ENV CONSUL_TEMPLATE_VERSION="0.18.2" \
     DOCKER_HOST=unix:///tmp/docker.sock \
-    DOCKER_VER=1.13.1
+    DOCKER_VER=17.03.1-ce
 
 RUN apk --no-cache add curl zip tar \
     && curl -sSL https://releases.hashicorp.com/consul-template/${CONSUL_TEMPLATE_VERSION}/consul-template_${CONSUL_TEMPLATE_VERSION}_linux_amd64.zip > ./consul.zip \
