@@ -5,6 +5,7 @@ ENV CONSUL_TEMPLATE_VERSION="0.19.3" \
     DOCKER_VER=17.07.0-ce
 
 RUN apk --no-cache add curl zip tar \
+    && apk --no-cache upgrade \
     && curl -sSL https://releases.hashicorp.com/consul-template/${CONSUL_TEMPLATE_VERSION}/consul-template_${CONSUL_TEMPLATE_VERSION}_linux_amd64.zip > ./consul.zip \
     && unzip consul.zip \
     && mv consul-template /usr/local/bin/consul-template \
