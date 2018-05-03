@@ -1,8 +1,8 @@
-FROM alpine:3.6
+FROM alpine:3.7
 
-ENV CONSUL_TEMPLATE_VERSION="0.19.3" \
+ENV CONSUL_TEMPLATE_VERSION="0.19.4" \
     DOCKER_HOST=unix:///tmp/docker.sock \
-    DOCKER_VER=17.07.0-ce
+    DOCKER_VER=18.04.0-ce
 
 RUN apk --no-cache add curl zip tar \
     && apk --no-cache upgrade \
